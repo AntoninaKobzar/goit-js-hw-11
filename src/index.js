@@ -10,7 +10,7 @@
     let query = '';
     let page = 1;
     let simpleLightBox;
-    let totalHits = 0;
+    let currentHits = 0;
     const perPage = 40;
 
     searchForm.addEventListener('submit', onSearchForm);
@@ -64,7 +64,6 @@ async function onSearchForm(e) {
     page = 1;
     query = e.currentTarget.elements.searchQuery.value.trim();
     gallery.innerHTML = '';
-    totalHits = response.hits.length;
 
     if (query === '') {
         Notiflix.Notify.failure(
@@ -74,7 +73,7 @@ async function onSearchForm(e) {
     }
 
     const response = await fetchImages(query, page, perPage);
-    // let totalHits = response.hits.length;
+    currentHits = response.hits.length;
     try {
         if (response.totalHits === 0) {
             Notiflix.Notify.failure(
