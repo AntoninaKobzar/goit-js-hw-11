@@ -7,8 +7,8 @@
 
 body {
   font-family:"Helvetica Neue", sans-serif;
-  background-color: rgb(4, 63, 63);
-  
+  background-color: rgb(216, 221, 208);
+
 }
 
 a {
@@ -23,7 +23,9 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top:50px;
+  padding-bottom: 50px;
+  background-color: rgb(105, 37, 214);
 }
 
 .search-form input {
@@ -32,6 +34,7 @@ p {
   border: none;
   outline: none;
   padding: 8px;
+  
 }
 
 .search-form button {
@@ -58,6 +61,7 @@ p {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 20px;
+  background-color: rgb(218, 214, 209);
 }
 
 .gallery,
@@ -108,7 +112,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgb(27, 8, 80);
   font-size: 15;
 }
 
