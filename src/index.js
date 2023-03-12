@@ -64,6 +64,7 @@ async function onSearchForm(e) {
     page = 1;
     query = e.currentTarget.elements.searchQuery.value.trim();
     gallery.innerHTML = '';
+    totalHits = response.hits.length;
 
     if (query === '') {
         Notiflix.Notify.failure(
@@ -73,7 +74,7 @@ async function onSearchForm(e) {
     }
 
     const response = await fetchImages(query, page, perPage);
-    totalHits = response.hits.length;
+    // let totalHits = response.hits.length;
     try {
         if (response.totalHits === 0) {
             Notiflix.Notify.failure(
