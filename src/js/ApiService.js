@@ -1,7 +1,6 @@
 import axios from 'axios';
 const KEY = '34322980-08373f8358d1fe63d0b7301a8';
 
-// Перевірка помилок під час виконання запиту до серверу
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 axios.interceptors.response.use(
   response => {

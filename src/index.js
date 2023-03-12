@@ -10,6 +10,7 @@
     let query = '';
     let page = 1;
     let simpleLightBox;
+    let totalHits = 0;
     const perPage = 40;
 
     searchForm.addEventListener('submit', onSearchForm);
